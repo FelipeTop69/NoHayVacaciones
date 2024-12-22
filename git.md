@@ -1,7 +1,20 @@
 # GIT HUB
-*Usos y comandos para trabajar en un proyecto*
+*Usos y Comandos de GIT con GitHub*
 
-1. ### Configuracion de GIT
+## INDICE
+* [Configuracion de GIT](#confiGit)
+* [Comandos Basicos](#comandosBasicos)
+* [Ignorar Archivos](#ignore)
+* [Ramas](#ramas)
+* [Funciones de GIT](#funcionesGit)
+* [Git Stash](#stash)
+* [Repositorios Remotos](#reposRemotos)
+* [Comandos Extras](#comandosExtras)
+* [Informacion Adicional](#infoAdicional)
+* [Enlaces Informativos](#linksInfo)
+* [Referencias 📚](#referencias)
+
+1. <h3 id="confiGit">Configuracion de GIT</h3>
     * Configurar nombre: git config --global user.name "" 
 
     * Configurar correo: git config --global user.email 
@@ -17,7 +30,7 @@
 ---
 ---
 
-2. ### Comandos Basicos 
+2. <h3 id="comandosBasicos">Comandos Basicos</h3>
     #### Carpetas o Directorios
     * Listar archivos y carpetas: **ls** o **ls -l** para mas detalles o **ls -a** para ver tambien archivos ocultos
 
@@ -32,7 +45,7 @@
     * Crear archivo: touch (nombre + extension) - Se pueden crear mas archivos en una sola linea, separanadolos por espacios
 
     * Eliminar carpeta: rm -r (nombre)
-
+Comandos Basicos
     * Eliminar archivo: rm (nombre + extension)
 
     ***Eliminar archivo o carpeta y agregar de una vez al stage: Se le agrega 'git' (git rm -r (carpeta) - git rm (archivo))***
@@ -69,7 +82,7 @@
 ---
 ---
 
-3. ### Ignorar Archivos 
+3. <h3 id="ignore">Ignorar Archivos</h3> 
     * Crear Archivo .gitignore
 
     * Indicar la rutas de los archivos a ignorar o carpetas
@@ -86,7 +99,7 @@
 ---
 ---
 
-4. ### Ramas
+4. <h3 id="ramas">Ramas</h3>
     #### Locales
     * Listar ramas locales: git branch - Agregar **-v** para ver el ultimo commit de cada rama
 
@@ -134,7 +147,7 @@
 ---
 ---
 
-5. ### Funciones de GIT
+5. <h3 id="funcionesGit">Funciones de GIT</h3>
     #### Versiones
     * ##### Volver a una version anterior 
         * Consultar versiones: git log --oneline
@@ -167,7 +180,7 @@
 ---
 ---
 
-6. ### Git Stash
+6. <h3 id="stash">Git Stash</h3>
 ***El stash sirve para guardar temporalemnte cambios no confirmados. Esto nos puede servir cuando hacemos cambios de ramas o cambios entre versiones. Un ejemplo podria ser; estoy trabajando en mi rama y el equipo de trabajo me solicita que me vaya a otra rama a solucionar algo, pero resulta que en la rama donde estoy trabajando hay codigo incompleto y no puedo confirmar aun, y si hago switch puede que pierda lo que tenga en mi rama, ahi es cuando entra el stash, que nos permite guardar estos cambios de manera temporal sin confirmar ni nd***
 
 * Crear Stash (Guarda todos los cambios no confirmados y restaura tu directorio al último commit limpio): git stash
@@ -202,7 +215,7 @@
 ---
 ---
 
-7. ### Repositorios Remotos
+7. <h3 id="reposRemotos">Repositorios Remotos</h3>
     #### Crear un repositorio local y vincularlo con un remoto
     * Inicializar repo local: git init
 
@@ -210,7 +223,7 @@
 
     * Cambiar el nombre de la rama actual: git branch -M main
 
-    * Conectar al remoto: git remote add origin (Manera de Conectar)
+    * Conectar al remoto: git remote add origin URL-del-repositorio (HTPPS O SHH)
 
     * Comprobar conexion con el remoto: git remote show origin 
 
@@ -219,7 +232,7 @@
     ---
 
     #### Vincular repo remoto a un repo local existente
-    * Conectar al remoto: git remote add origin (Manera de Conectar)
+    * Conectar al remoto: git remote add origin URL-del-repositorio (HTPPS O SHH)
 
     * Comprobar conexion con el remoto: git remote show origin 
 
@@ -227,6 +240,27 @@
 
     * Sincronizar repos: git push -u origin main
 
+    ---
+
+    #### Clonar Repositorio Limitado
+    ***Los siguiente comandos ayudaran a ahorrar tiempo y espacio a la hora de clonar repos***
+
+    * Clonar con el ultimo commit: git clone --depth 1 URL-del-repositorio (HTPPS O SHH)
+
+    * Clonar con más commits recientes: git clone --depth # URL-del-repo (HTPPS O SHH)
+
+    > Estos comando clonaran la rama prederteminada de los repos (main). Para clonar o descargar otras ramas diferentes se puede hacer lo siguiente:
+
+    * Clonar una rama específica: git clone --depth 1 --branch nombre-de-la-rama URL-del-repo
+
+    * Descargar una rama limitada de un repo ya clonado:
+        * Descargar cambios limitados: git fetch --depth 1
+        * Ver la ramas remotas disponibles: git branch -r
+        * Pasarse a la rama: git checkout (rama remota)
+
+    * Obtener Repositorio Completo:
+        * git fetch --unshallow
+        * git fecth --all
 
     ---
 
@@ -242,7 +276,8 @@
 ---
 ---
 
-## Comandos Extras
+<h3 id="comandosExtras">Comandos Extras</h3>
+
 * Ver contenido de archivos: cat (nombre + extension)
 
 * Agregar una alias a un comando: git config --global alias.(nombre alias) "comando"
@@ -257,7 +292,8 @@
 ---
 ---
 
-## Informacion Adicional
+<h3 id="infoAdicional">Informacion Adicional</h3>
+
 * ### Herramienta Grafica Ideal
     > ***GitKraken***
 
@@ -284,7 +320,8 @@
 ---
 ---
 
-## Enlaces Informativos
+<h3 id="linksInfo">Enlaces Informativos</h3>
+
 * ### Comandos Basicos de Git
     > [Comandos de Git](https://training.github.com/downloads/es_ES/github-git-cheat-sheet/ "Comandos")
 
@@ -294,7 +331,7 @@
 ---
 ---
 
-## Referencias 📚
+<h3 id="referencias">Referencias 📚</h3>
 
 Video Tutoriales y Canales de donde obtuve la información:
 
