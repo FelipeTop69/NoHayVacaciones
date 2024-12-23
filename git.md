@@ -1,5 +1,5 @@
 # GIT HUB
-*Usos y Comandos de GIT con GitHub*
+> *Usos y Comandos de GIT con GitHub*
 
 ## INDICE
 * [Configuracion de GIT](#confiGit)
@@ -13,6 +13,9 @@
 * [Informacion Adicional](#infoAdicional)
 * [Enlaces Informativos](#linksInfo)
 * [Referencias 📚](#referencias)
+
+---
+---
 
 1. <h3 id="confiGit">Configuracion de GIT</h3>
     * Configurar nombre: git config --global user.name "" 
