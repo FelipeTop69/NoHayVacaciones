@@ -55,6 +55,8 @@ Comandos Basicos
 
     * Renombrar archivos o carpetas: mv (before/) (after/)
 
+    * Abrir ubicacion actual en el explorador: explorer .
+
     ---
 
     #### Repositorios
