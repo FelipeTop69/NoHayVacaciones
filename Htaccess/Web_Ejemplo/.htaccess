@@ -1,0 +1,24 @@
+# Renstrigir el acceso al listado de directorios (Error 403)
+Options All -Indexes
+
+# Restringir carpeta con el archivo
+#   Order Deny,Allow
+#   Deny from all
+
+# Redireccion a pagina segun error (existen multiples errores)
+# Error 401
+ErrorDocument 401 /NoHayVacaciones/Htaccess/Web_Ejemplo/401.html
+# Error 403
+ErrorDocument 403 /NoHayVacaciones/Htaccess/Web_Ejemplo/403.html
+# Error 404
+ErrorDocument 404 /NoHayVacaciones/Htaccess/Web_Ejemplo/404.html
+
+# Proteger Directorio Usuario Contraseña
+AuthName "Autorizacion Requerida"
+AuthUserFile C:\xampp\htdocs\NoHayVacaciones\Htaccess\Web_Ejemplo\.htpasswd
+AuthType Basic
+Require user samuel felipe
+
+# Redireccion a un archivo al abir la carpeta raiz
+RewriteEngine On
+RewriteRule ^$ /NoHayVacaciones/Htaccess/Web_Ejemplo/401.html [R=302,L]
