@@ -4,10 +4,10 @@
 
 ---
 
+## Configuraciones Basicas
+
 ### 1. Creacion del Archivo
 Se crea un nuevo archivo con el nombre **.htaccess**
-
-### Configuraciones Basicas
 
 > Esta configuracion sera aplicada a la web de ejemplo
 
@@ -55,3 +55,11 @@ Se crea un nuevo archivo con el nombre **.htaccess**
 RewriteEngine On
 RewriteRule ^$ /NoHayVacaciones/Htaccess/Web_Ejemplo/401.html [R=302,L]
 ~~~
+
+---
+
+## Referencias 📚
+
+Video Tutoriales y Canales de donde obtuve la información:
+
+1. [0# - 💻 HTACCESS](https://www.youtube.com/watch?v=y9KEgh6yXME&list=PLH_tVOsiVGzkGD2sB-cmSkxKzvoMYZrHL&index=1 "Tutorial") - Carlos Alfaro
