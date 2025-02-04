@@ -106,6 +106,11 @@
     **/style.css
     ```
 
+* Sacar arhivos o carpetas que ya ste siendo rastreadas:
+  * git rm -r --cached .vscode
+  * git commit -m "Removiendo .vscode del control de versiones"
+  * git push origin main  # O el nombre de tu rama
+
 ---
 ---
 
