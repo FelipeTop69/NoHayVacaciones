@@ -287,6 +287,8 @@
     * git fetch --unshallow
     * git fecth --all
 
+* Eliminar conexion con repo: git remote remove (nombre conexion)
+
 ---
 
 #### Forks
