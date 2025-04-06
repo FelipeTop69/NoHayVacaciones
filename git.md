@@ -291,6 +291,52 @@
 
 ---
 
+#### Descargar Un Archivo o Carpeta especifica de un Repo sin tener que clonarlo completo
+> Requisitos: Git 2.25 o superior (puedes verificar con git --version)
+* Clonar el repositorio sin historial completo:
+   ```
+    git clone --filter=blob:none --no-checkout <URL>
+   ```
+
+* Entrar el repo
+  
+* Activar el modo sparse-checkout
+   ```
+    git sparse-checkout init --cone
+   ```
+
+* Seleccionar la carpeta específica (La ruta sera la que muetre la url, pero despues del nombre de la rama. Importante que vaya entre comillas)
+  > Igual Para archivos
+   ```
+      git sparse-checkout set "URL"
+   ```
+
+* Finalemnte hacer checkout de la rama principal
+  ```
+    git checkout main
+  ```
+
+>¿Y si después quiero otras carpetas u otros archivos?
+
+* Para Carpetas
+  ```
+   git sparse-checkout set <otra/ruta> <otra/mas>
+  ```
+  
+* Para Archivos
+  ```
+   git sparse-checkout set \
+  "ruta/a/archivo1.txt" \
+  "otra/ruta/archivo2.py"
+  ```
+
+* Para salir de esta funcionalidad:
+  ```
+    git sparse-checkout disable
+  ```
+
+---
+
 #### Forks
 * Bifurcaciones
 
@@ -367,4 +413,5 @@ Video Tutoriales y Canales de donde obtuve la información:
 3. [Curso de GIT y GITHUB DESDE CERO Para Aportar a Proyectos](https://www.youtube.com/watch?v=qdec2M4NwT0&list=PLNfAFIq5pE5UNS6HWrfB44vha8Gfje5wq&index=2) - midulive
 4. ***TheHarryCode***
 5. ***Reliquias del Software***
-5. ***EDteam***
+6. ***EDteam***
+7. ***ChatGPT***
