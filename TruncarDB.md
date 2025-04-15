@@ -82,7 +82,7 @@ EXEC sp_Kill_Table 'NombreDeLaTabla';
 ---
 
 
-##  PostgreSQL
+## :elephant: PostgreSQL
 
 ### `sp_Kill_All`
 
@@ -140,7 +140,7 @@ CALL sp_Kill_Table('nombre_tabla');
 ---
 
 
-##  MySQL
+## :dolphin: MySQL
 
 ### `sp_Kill_All`
 
