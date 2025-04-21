@@ -1,0 +1,64 @@
+{
+  // Oculta archivos o carpetas del explorador de archivos de VSCode, sin borrarlos del proyecto.
+  "files.exclude": {
+    "**/.git": true,                 // Oculta la carpeta de control de versiones Git
+    "**/.DS_Store": true,            // Oculta archivos ocultos de macOS
+    "**/node_modules": true,         // Oculta la carpeta donde viven las dependencias de npm
+    "**/vendor": true,               // Oculta la carpeta de dependencias de Composer (Laravel, PHP)
+    "**/dist": true,                 // Oculta el directorio de build o distribución (frontend, JS)
+    "**/build": true,                // Igual que "dist", pero con otro nombre
+    "**/coverage": true,             // Oculta la carpeta de reportes de tests (ej. Jest, Mocha)
+    "**/*.log": true,                // Oculta archivos de log que se generan al correr apps/servidores
+    "**/*.min.*": true,              // Oculta todos los archivos minificados, como .min.js, .min.css
+    "**/*.map": true                 // Oculta los source maps (.js.map, .css.map)
+  },
+
+  // Evita que ciertas carpetas o archivos aparezcan cuando haces una búsqueda global en VSCode (Ctrl+Shift+F).
+  "search.exclude": {
+    "**/node_modules": true,        // Evita que el buscador busque dentro de node_modules
+    "**/vendor": true,              // Evita que busque en la carpeta vendor (Composer, PHP)
+    "**/dist": true,                // No busca en la carpeta de build
+    "**/build": true,               // Igual, por si se llama "build"
+    "**/*.min.*": true,             // No busca en archivos minificados
+    "**/*.map": true                // No busca en archivos .map
+  },
+
+  // Oculta ciertas carpetas del panel de control de versiones de Git en VSCode (Source Control). Es útil hay varios proyectos en una misma carpeta o submódulos.
+  "git.ignoredRepositories": [
+    "**/node_modules",              // No los muestra en el Source Control
+    "**/vendor"                     // Tampoco los vendor (PHP)
+  ],
+
+  // Activa el formateo automático del código cada vez que guardás (Ctrl+S).
+  "editor.formatOnSave": true,
+
+  // Define cuántos espacios vale un tabulador, dependiendo del lenguaje.
+  "[html]": {
+    "editor.tabSize": 2             // Para HTML, se usan 2 espacios por tab
+  },
+  "[javascript]": {
+    "editor.tabSize": 2             // JS también suele usar 2
+  },
+  "[php]": {
+    "editor.tabSize": 4             // PHP por convención suele usar 4
+  },
+
+  // Controla cómo se generan las rutas de los imports en JS/TS.
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+    // "relative" → genera imports como ./utils.js o ../components/Header.js
+    // "non-relative" → busca basándose en paths absolutos (utils o components/Header)
+    // Usar "relative" es común en proyectos donde no se configuran alias.
+
+  // Configurar formateador
+  // Pretier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "ditor.formatOnSave": true,
+
+  //ESLint
+  "eslint.validate": [
+  "javascript",
+  "javascriptreact",
+  "typescript"
+  ],
+}
