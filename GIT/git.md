@@ -295,44 +295,80 @@
 > Requisitos: Git 2.25 o superior (puedes verificar con git --version)
 * Clonar el repositorio sin historial completo:
    ```
-    git clone --filter=blob:none --no-checkout <URL>
+   git clone --filter=blob:none --no-checkout <URL>
    ```
 
 * Entrar el repo
   
 * Activar el modo sparse-checkout
    ```
-    git sparse-checkout init --cone
+   git sparse-checkout init --cone
    ```
 
-* Seleccionar la carpeta específica (La ruta sera la que muetre la url, pero despues del nombre de la rama. Importante que vaya entre comillas)
+* Seleccionar la carpeta específica (La ruta sera la que muestre la url, pero despues del nombre de la rama. Importante que vaya entre comillas)
   > Igual Para archivos
    ```
-      git sparse-checkout set "URL"
+   git sparse-checkout set "URL"
    ```
 
 * Finalemnte hacer checkout de la rama principal
   ```
-    git checkout main
+  git checkout main
   ```
 
 >¿Y si después quiero otras carpetas u otros archivos?
 
 * Para Carpetas
   ```
-   git sparse-checkout set <otra/ruta> <otra/mas>
+  git sparse-checkout set <otra/ruta> <otra/mas>
   ```
   
 * Para Archivos
   ```
-   git sparse-checkout set \
+  git sparse-checkout set \
   "ruta/a/archivo1.txt" \
   "otra/ruta/archivo2.py"
   ```
 
 * Para salir de esta funcionalidad:
   ```
-    git sparse-checkout disable
+  git sparse-checkout disable
+  ```
+  
+---
+
+#### Normalziar Finales de Linea
+> Agregar estos comandos en .gitattributes
+
+</br>
+
+* Comandos
+   ```bash
+   # Normalizar finales de línea
+   * text=auto
+
+   # Asegurar que ciertos tipos de archivo siempre usen LF
+   *.js text eol=lf
+   *.css text eol=lf
+   *.html text eol=lf
+   *.json text eol=lf
+   *.md text eol=lf
+
+   # Archivos binarios (no normalizar)
+   *.png binary
+   *.jpg binary
+   *.jpeg binary
+   *.gif binary
+   *.woff binary
+   *.woff2 binary
+   *.ttf binary
+   ```
+* Enviar Comit
+  ```
+  git add --renormalize .
+  ```
+  ```
+  git commit -m "Normalizar finales de línea con .gitattributes"
   ```
 
 ---
