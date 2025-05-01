@@ -7,7 +7,7 @@ Ngrok se puede utilizar con el ejecutable en cada directorio o se puede configur
 ---
 
 ### Uso Mediante Ejecutable
-* Ingresar a la web de Ngrok y loguearse: [Ngrok](https://ngrok.com/)
+* Ingresar a la web de Ngrok y loguearse: <a href="https://ngrok.com/" target="_blank">Ngrok</a>
 
 * Dirigirse a **Getting Started (Setup  & Installation)**
 
