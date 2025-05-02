@@ -176,7 +176,7 @@
 
     * Volver a la version: git checkout (hash de la version)
 
-    * Apuntar el repo a una version especifica: git checkout HEAD 
+    * Apuntar el repo a una version especifica: git checkout HEAD (No Usar)
 
     * Volver a la version mas reciente: git checkout (nombre de la rama - Ejemplo: git checkout main)
 
@@ -186,7 +186,12 @@
 
 * ##### Resetear Versiones
     * Volver a una version y eliminar las versiones previas: git reset --hard (hash al que se desa volver)
-
+    * Asociar el commit a la rama main:
+        * git status: Deberas  ver algo como esto 'HEAD detached at <hash del commit> nothing to commit, working tree clean'
+        * Crear una rama temporal: git branch temp-branch <hash del commit>
+        * Volver a la  rama main: git checkout main
+        * Apuntar el commit a la rama: git reset --hard <hash del commit>
+        
         > Si el repo local esta vinculado con un repo remoto y se desean subir lo cambios:
             git push origin main --force (Si los repo estan sincro, no es necesario 'origin main')
 
