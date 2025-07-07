@@ -202,6 +202,25 @@
 
     ***El 'git reset --hard' funciona tanto para delante como para atras***
 
+#### Clean
+> Para Eliminar los archivos no rastreados
+
+```bash
+git clean -f
+```
+
+> Para Eliminar los archivos y directorios no rastreados
+
+```bash
+git clean -fd
+```
+
+> Para ver lo que se eliminara:
+
+```bash
+git clean -n
+```
+
 ---
 ---
 
