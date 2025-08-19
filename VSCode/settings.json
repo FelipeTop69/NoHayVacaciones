@@ -10,7 +10,36 @@
     "**/coverage": true,             // Oculta la carpeta de reportes de tests (ej. Jest, Mocha)
     "**/*.log": true,                // Oculta archivos de log que se generan al correr apps/servidores
     "**/*.min.*": true,              // Oculta todos los archivos minificados, como .min.js, .min.css
-    "**/*.map": true                 // Oculta los source maps (.js.map, .css.map)
+    "**/*.map": true,                 // Oculta los source maps (.js.map, .css.map)
+    
+    // Configuración para Angular
+    ".angular/":true,
+		"dist/":true,
+		".editorconfig":true,
+		"angular.json":true,
+		"package-lock.json": true,
+		"package.json":true,
+		"tsconfig.app.json":true,
+		"tsconfig.json":true,
+		"tsconfig.spec.json":true,
+
+    // Configuración para React
+    ".expo/":true,
+    "app.json": true,
+    "babel.config.js":true,
+    "index.ts":true,
+    "metro.config.js":true,
+    "nativewind-env.d.ts":true,
+    "package-lock.json": true,
+    "package.json": true,
+    "tailwind.config.js":true,
+    "tsconfig.json": true,
+
+    // Configuración para SpringBoot
+      ".mvn/":true,
+      "target/":true,
+      "mvnw":true,
+      "mvnw.cmd":true
   },
 
   // Evita que ciertas carpetas o archivos aparezcan cuando haces una búsqueda global en VSCode (Ctrl+Shift+F).
@@ -60,5 +89,5 @@
   "javascript",
   "javascriptreact",
   "typescript"
-  ],
+  ]
 }

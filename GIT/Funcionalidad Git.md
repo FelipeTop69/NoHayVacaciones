@@ -1,4 +1,4 @@
-¡Genial! Te dejo aquí un script listo para guardar como `descargar_parte_repo.sh` (o el nombre que prefieras). Solo necesitás darle permisos de ejecución y correrlo pasando la **URL del repo**, la **rama**, y la **ruta que quieres bajar**.
+# Descargar Parte de Un Repositorio
 
 ---
 
